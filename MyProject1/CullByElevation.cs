@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Grasshopper.Kernel;
+using Grasshopper.Kernel.Types;
 using Rhino.Geometry;
 
 namespace MyProject1
@@ -12,7 +13,7 @@ namespace MyProject1
         /// Initializes a new instance of the CullByElevation class.
         /// </summary>
         public CullByElevation()
-          : base("Cull Elevation", "CullZ", "Cull objects by relative elevation", "Sets", "Sequence")
+          : base("Cull Elevation", "CullZ", "Cull objects by relative elevation", "Extra", "Sequence")
         {
         }
 
@@ -47,7 +48,7 @@ namespace MyProject1
             //Retrieve the whole list using Da.GetDataList().
             if ((!DA.GetDataList(0, geometry)))
                 return;
-            if ((!DA.GetData(1, count)))
+            if (!DA.GetData(1, ref count))
                 return;
 
             //Validate inputs.
