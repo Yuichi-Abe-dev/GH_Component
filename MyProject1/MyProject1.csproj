@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="CircleLineSplit .cs" />
     <Compile Include="CullByElevation.cs" />
+    <Compile Include="ExtendingGUI.cs" />
     <Compile Include="FourRulesOperation.cs" />
     <Compile Include="HelloGH.cs" />
     <Compile Include="Trigonometry.cs" />
