@@ -2,6 +2,7 @@
 using Rhino.Geometry;
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace MyProject1
 {
@@ -11,9 +12,9 @@ namespace MyProject1
         /// Initializes a new instance of the ExtendingGUI class.
         /// </summary>
         public ExtendingGUI()
-          : base("ExtendingGUI", "Nickname",
+          : base("ExtendingGUI", "ExtGUI",
               "Description",
-              "Category", "Subcategory")
+              "Extra", "Util")
         {
         }
         public override bool AppendMenuItems(ToolStripDropDown menu)
