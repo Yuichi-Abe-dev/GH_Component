@@ -62,6 +62,7 @@
     <Compile Include="ExtendingGUI2.cs" />
     <Compile Include="FourRulesOperation.cs" />
     <Compile Include="HelloGH.cs" />
+    <Compile Include="RangeByCount.cs" />
     <Compile Include="SampleGhFibonacciComponent.cs" />
     <Compile Include="SampleGhTaskFibonacciComponent.cs" />
     <Compile Include="Trigonometry.cs" />
