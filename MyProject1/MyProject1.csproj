@@ -64,7 +64,6 @@
     <Compile Include="HelloGH.cs" />
     <Compile Include="RangeByCount.cs" />
     <Compile Include="SampleGhFibonacciComponent.cs" />
-    <Compile Include="SampleGhTaskFibonacciComponent.cs" />
     <Compile Include="Trigonometry.cs" />
     <Compile Include="MyFirstComponent.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

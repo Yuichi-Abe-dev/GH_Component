@@ -32,7 +32,7 @@ namespace MyProject1
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddNumberParameter("Results", "R", "The calculation results", GH_ParamAccess.item);
+            pManager.AddNumberParameter("Results", "R", "The calculation results", GH_ParamAccess.list);
         }
 
         /// <summary>
@@ -41,6 +41,26 @@ namespace MyProject1
         /// <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
         protected override void SolveInstance(IGH_DataAccess DA)
         {
+            double S = new double();
+            double E = new double();
+            double C = new double();
+            if (!DA.GetData(0, ref S))
+                return;
+            if (!DA.GetData(1, ref E))
+                return;
+            if (!DA.GetData(2, ref C))
+                return;
+            int i = 0;
+            List<double> numbers = new List<double>();
+
+            C = Math.Round(C, MidpointRounding.AwayFromZero);
+            while (i < C)
+            {
+                double step = (E - S) / (C - 1);
+                numbers.Add((i * step) + S);
+                i++;
+            }
+            DA.SetDataList(0, numbers);
         }
 
         /// <summary>
